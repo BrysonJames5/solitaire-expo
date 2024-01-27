@@ -3,25 +3,15 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NativeBaseProvider } from "native-base";
 import React from "react";
 import { StyleSheet } from "react-native";
-import { Board } from "./src/screens/Board";
+import { Example } from "./src/screens/BarDetailScreen/BarDetailScreen";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
 
   return (
-    <NavigationContainer>
-      <NativeBaseProvider>
-        <Board />
-      </NativeBaseProvider>
-    </NavigationContainer>
+    <NativeBaseProvider>
+      <Example />
+    </NativeBaseProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
